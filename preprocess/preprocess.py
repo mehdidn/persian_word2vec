@@ -3,6 +3,7 @@ import hazm
 
 RE_REMAIN = '[^آ-ی\n\،\؛\؟\!\:\«\»\.\ \‌]'
 RE_PERSIAN_ALPHABET = '[^آ-ی]'
+RE_JUST_WORDS = '[^آ-ی\n\ \‌]'
 
 read_stop_words = [i.strip().split() for i in open("stopwords.dat").readlines()]
 stop_words = []
@@ -58,6 +59,9 @@ def preprocess(file_path):
 
     for line in lines:
         line = re.sub(RE_REMAIN, ' ', line)
+
+        # just words
+        #line = re.sub(RE_JUST_WORDS, ' ', line)
 
         check_line = re.sub(RE_PERSIAN_ALPHABET, '', line)
         if len(check_line) == 0:
