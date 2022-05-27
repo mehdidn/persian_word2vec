@@ -48,3 +48,6 @@ min_count=5
 
 visualization:
 https://projector.tensorflow.org/?config=https://gist.githubusercontent.com/mehdidn/8bdf6eb3d228bd521cd8b7e1bd2f8729/raw/bd8d491a24abdc0a55a016f2adaeb29473d2b8ea/word2vec_pytorch_projector_min_count_5
+
+for running web app see 'how to run web app.txt':
+https://github.com/mehdidn/persian_word2vec/blob/main/how%20to%20run%20web%20app.txt
