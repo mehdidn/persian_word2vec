@@ -34,3 +34,4 @@ for index in range(len(all_words)):
 out_vocab.close()
 out_v.close()
 out_m.close()
+out_for_graph.close()
