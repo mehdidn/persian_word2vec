@@ -1,0 +1,30 @@
+// copy words-vectors.txt
+copy .\out_word2vec_tensorflow\words-vectors.txt .\word2vec_graph\graph-data\words-vectors.txt
+or
+copy .\out_word2vec_pytorch\words-vectors_pytorch.txt .\word2vec_graph\graph-data\words-vectors.txt
+
+
+// run local data server
+cd word2vec_graph
+npm install
+// run line below to change arguments like number of nearest neighbors or dimensions of vectors or etc
+words-vectors_to_edges_txt.py -h
+python words-vectors_to_edges_txt.py
+node edges2graph.js graph-data/edges.txt
+node --max-old-space-size=12000 layout.js
+copy .\graph-layout\positions.bin .\graph-data\positions.bin
+copy .\graph-data\labels.json .\my-pm-data-server\my-graph\version-1\labels.json
+copy .\graph-data\links.bin .\my-pm-data-server\my-graph\version-1\links.bin
+copy .\graph-data\positions.bin .\my-pm-data-server\my-graph\version-1\positions.bin
+cd my-pm-data-server
+npm i http-server -g
+http-server --cors -p 9090
+// This will start a local data server at http://127.0.0.1:9090/
+
+
+// run dev server
+cd pm
+npm i
+npm start
+set PORT=8081 && node dev-server.js
+// graph should be accessible at http://127.0.0.1:8081/#/galaxy/my-graph

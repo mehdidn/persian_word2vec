@@ -9,11 +9,13 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '--num_nearest_neighbors', default=15,
-        help='Ignore all vectors with distance larger than this')
+        help='number of nearest neighbors to make edges')
     parser.add_argument(
         '--threshold', type=float, nargs='+', default=.9,
-        help='Ignore all vectors with distance larger than this')
-    parser.add_argument('--input_vectors', default = "graph-data/words-vectors.txt")
+        help='if used then Ignore all vectors with distance larger than this')
+    parser.add_argument(
+        '--input_vectors', default="graph-data/words-vectors.txt",
+        help='path to wrds and vectors')
     parser.add_argument(
         '--out_file', default="graph-data/edges.txt",
         help=
