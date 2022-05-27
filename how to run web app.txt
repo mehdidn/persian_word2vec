@@ -28,3 +28,8 @@ npm i
 npm start
 set PORT=8081 && node dev-server.js
 // graph should be accessible at http://127.0.0.1:8081/#/galaxy/my-graph
+
+// use h for showing help
+// left click on each node to see details
+// or search for a word in search bar to find the node
+// for each node out-degree shows the nearest neighbors
