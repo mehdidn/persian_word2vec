@@ -33,3 +33,4 @@ set PORT=8081 && node dev-server.js
 // left click on each node to see details
 // or search for a word in search bar to find the node
 // for each node out-degree shows the nearest neighbors
+// left click on out-degree to see nearest neighbors
