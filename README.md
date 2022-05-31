@@ -54,3 +54,6 @@ https://github.com/mehdidn/persian_word2vec/blob/main/how%20to%20run%20web%20app
 
 LaTeX Reprt (word2vec.pdf):
 https://github.com/mehdidn/persian_word2vec/blob/main/word2vec.pdf
+
+LaTeX Files:
+https://github.com/mehdidn/persian_word2vec/tree/main/LaTeX%20Files
