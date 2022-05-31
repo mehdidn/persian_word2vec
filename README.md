@@ -51,3 +51,6 @@ https://projector.tensorflow.org/?config=https://gist.githubusercontent.com/mehd
 
 for running web app see 'how to run web app.txt':
 https://github.com/mehdidn/persian_word2vec/blob/main/how%20to%20run%20web%20app.txt
+
+LaTeX Reprt (word2vec.pdf):
+https://github.com/mehdidn/persian_word2vec/blob/main/word2vec.pdf
